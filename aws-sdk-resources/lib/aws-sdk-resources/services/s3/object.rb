@@ -80,7 +80,7 @@ module Aws
       # @example Managed copy of large objects
       #
       #   # uses multipart upload APIs to copy object
-      #   object.copy_to('src-bucket/src-key', multipart_copy: true)
+      #   object.copy_to('target-bucket/target-key', multipart_copy: true)
       #
       def copy_to(target, options = {})
         ObjectCopier.new(self, options).copy_to(target, options)
